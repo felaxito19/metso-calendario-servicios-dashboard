@@ -5,7 +5,16 @@ from mod_filters import filtros_basicos, aplicar_filtros
 from mod_pivot import crear_pivot
 from mod_aggrid import render_grid, estilo_tabla
 
+
+from mod_auth import require_login
+
 st.set_page_config(page_title="Calendario", layout="wide")
+
+# Bloquea acceso si no está logueado
+require_login()
+
+st.write(f"Bienvenido **{st.session_state.user.user.email}**")
+
 st.title("Calendario de Servicios | Área de propuestas")
 
 supabase = init_supabase(st.secrets["SUPABASE_URL"], st.secrets["SUPABASE_KEY"])
@@ -366,4 +375,5 @@ with tab2:
                     estilo_tabla,
                     pretty_mo,
                     pretty_rec
+
                 )
