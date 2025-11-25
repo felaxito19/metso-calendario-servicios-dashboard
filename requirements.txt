@@ -1,20 +1,7 @@
-streamlit==1.39.0
+streamlit
 pandas==2.2.2
-python-dateutil==2.9.0.post0
-requests==2.32.3
+python-dateutil
+supabase
+streamlit-aggrid
 
-# Supabase
-supabase-py==2.4.3
-gotrue==2.4.0
-postgrest==0.13.0
-realtime==1.0.0
-storage3==0.5.0
 
-# AG-Grid for Streamlit
-streamlit-aggrid==1.0.4
-
-# Para manejar archivos Excel (si lo usas en algún módulo)
-openpyxl==3.1.2
-
-# Para normalización y utilidades (opcional pero recomendado)
-unicodedata2==15.1.0
