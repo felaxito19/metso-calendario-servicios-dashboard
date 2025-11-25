@@ -12,7 +12,7 @@ st.set_page_config(page_title="Calendario", layout="wide")
 
 # Bloquea acceso si no está logueado
 if "user" not in st.session_state or st.session_state.user is None:
-    st.switch_page("login.py")
+    st.switch_page("pages/login.py")
 
 
 st.write(f"Bienvenido **{st.session_state.user.user.email}**")
@@ -379,4 +379,5 @@ with tab2:
                     pretty_rec
 
                 )
+
 
