@@ -9,9 +9,7 @@ if "user" not in st.session_state:
 
 st.title("🔐 Iniciar Sesión")
 
-# Si ya está logueado → redirige
-if st.session_state.user is not None:
-    st.switch_page("app.py")
+
 
 tab1, tab2 = st.tabs(["Ingresar", "Registrar (solo admin)"])
 
@@ -24,7 +22,7 @@ with tab1:
         if user:
             st.session_state.user = user
             st.success("Sesión iniciada")
-            st.switch_page("app.py")
+            
 
 with tab2:
     if st.session_state.user is None:
